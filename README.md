@@ -41,7 +41,7 @@ $ python text_search_main.py \
 --kfe False
 ```
 
-Return value is the youtube link where the scenes is played.
+Return value is the youtube link where the scene is played.
 
 ```bash
 https://youtu.be/wbM4HS1sbXM?t=1
