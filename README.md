@@ -50,4 +50,4 @@ https://youtu.be/wbM4HS1sbXM?t=1
 
 ![image](https://github.com/gyuilLim/youtube_scene_search/assets/50009192/b58ffbee-d5d8-495a-a003-8784a76978b3)
 
-Scene that is mached with input text "a baby with her mother"
+Scene that is mached with input text **"a baby with her mother"**
