@@ -34,10 +34,10 @@ CLI requires 4 aurguments.
 So, you can install CLI like :
 
 ```bash
-$ python text_search_main.py \ 
+$ python text_search_main.py \
 --url 'https://youtu.be/wbM4HS1sbXM?si=g8A58del3e_5Ljpo' \
---text "a baby with her mother" \ 
---model "clip" \ 
+--text "a baby with her mother" \
+--model "clip" \
 --kfe False
 ```
 
