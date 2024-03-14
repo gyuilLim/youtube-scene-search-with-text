@@ -1,4 +1,4 @@
-# youtube_scene_text_search
+# youtube_scene_search
 
 This repository was created to find scenes auotomatically that you want in youtube video.
 
