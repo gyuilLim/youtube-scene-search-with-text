@@ -2,7 +2,7 @@
 
 This repository was created to find scenes auotomatically that you want in youtube video.
 
-I provied automation tool to find specific scene that you want
+I provied automation tool to find specific scene with your text.
 
 ## Environment(conda)
 
@@ -10,7 +10,7 @@ Various deep learning models are used in this tool.
 
  Models : [CLIP](https://github.com/openai/CLIP), [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2)
 
- So I recommend you to install the following command.
+ So I recommend you to install the following command, for setting an environment.
 
 
 
@@ -22,9 +22,9 @@ $ conda install --file requirements.txt
 
 ## Usage
 
-I give you CLI that make it easy to execute.
+I give you CLI for making it easy to execute.
 
-CLI requires 5 aurguments.
+CLI requires 4 aurguments.
 
 * youtube video(str) : video that you want to find sepecific scenes.
 * text(str) : text that you want to search with in youtube video.
