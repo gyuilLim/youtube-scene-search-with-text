@@ -1,22 +1,16 @@
 from text_search.videoLoad import video_load_from_url
 from text_search.frameMethod import key_frame_detection
 from text_search.dataset import custom_dataset
-from text_search.textSimilarity import text_similarity
 from text_search.model import load_model
+from text_search.inference import inference
 
-import numpy as np
 from torch.utils.data import DataLoader
-from lavis.models import load_model_and_preprocess
 from tqdm import tqdm
 import torch
-import clip
 import matplotlib.pyplot as plt
 import argparse
 
-import json
-import requests
-
-# input value
+# input argument
 parser = argparse.ArgumentParser(
     description='Input Text and what model you wanna use.')
 train_set = parser.add_mutually_exclusive_group()
@@ -37,13 +31,12 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # video load
 print('video load ... ')
 cap, url = video_load_from_url(args.url)
-# cap = video_load_from_url('https://www.youtube.com/watch?v=fiGSDywrX1Y')
 print('video load complete ')
 
 # KFD
-print('key frame detection ... ')
+print('key frame extraction ... ')
 frame_list, time_line = key_frame_detection(cap, args.kfe)
-print('key frame detection complete ')
+print('key frame extraction complete ')
 
 
 # dataloader
@@ -53,46 +46,13 @@ dataloader = DataLoader(dataset, batch_size=32)
 # load model
 print('model load ...')
 model = load_model(args.model, device)
-if args.model == "blip" :
-    model.float()
 print('model load complete')
 
 # inference
-
+print('inference loading ... ')
 model.eval()
-if args.model == "blip" :
-    print('infrence loading ... ')
-    msg_list = []
-    for data in tqdm(dataloader) :
-        data = data.to(device)
-        msg = model.generate({"image": data})
-        msg_list.append(msg)
-        
-    
-    flat_msg_list = [msg for sublist in msg_list for msg in sublist]
-
-    max_index = text_similarity(flat_msg_list, args.text)
-
-    print(max_index)
-
-    print('infrence complete ')
-
-elif args.model == "clip" :
-    print('infrence loading ... ')
-    logits = []
-    text = clip.tokenize([args.text]).to(device)
-    for data in tqdm(dataloader) :
-        data = data.to(device)
-        image_features = model.encode_image(data)
-        text_features = model.encode_text(text)
-        
-        logits_per_image, logits_per_text = model(data, text)
-        logits.append(logits_per_image)
-
-        flat = [item.item() for logit in logits for item in logit]
-        max_index = flat.index(max(flat))
-        
-    print('infrence complete ')
+max_index = inference(args.model, args.text, model, dataloader, device)
+print('infrence complete ')
 
 print(url + '?t=' + str(int(time_line[max_index])))
 plt.imshow(frame_list[max_index])

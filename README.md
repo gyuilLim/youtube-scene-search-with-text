@@ -13,14 +13,21 @@ Various deep learning models are used in this tool.
  So I recommend you to install the following command, for setting an environment.
 
 
+## Usage
+
+1. Clone repo from here https://github.com/gyuilLim/youtube_scene_search
+2. Change the directory to where you have cloned repo.
 
 ```bash
-$ conda install --file requirements.txt
+cd youtube_scene_search
+```
+3. Create conda virtual environment.
+```bash
+conda create -n youtube_scene_search python=3.8
+conda install --file requirements.txt
 ```
 
-
-
-## Usage
+4. Install the command.
 
 I give you CLI for making it easy to execute.
 

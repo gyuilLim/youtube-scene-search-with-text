@@ -7,7 +7,7 @@ def load_blip(device) :
         name="blip2", model_type="pretrain", is_eval=True, device=device
     )
 
-    return model
+    return model.float()
 
 def load_clip(device) :
     model, _ = clip.load("ViT-B/32", device=device)
