@@ -58,3 +58,12 @@ https://youtu.be/wbM4HS1sbXM?t=1
 ![image](https://github.com/gyuilLim/youtube_scene_search/assets/50009192/b58ffbee-d5d8-495a-a003-8784a76978b3)
 
 Scene that is mached with input text **"a baby with her mother"**
+
+
+## Recommended specifications
+
+||CLIP|BLIP-2|
+|---|---|---|
+|GPU memory|4.5GB|12GB|
+
+You can run this tool in the Colab T4 (15GB) environment.
