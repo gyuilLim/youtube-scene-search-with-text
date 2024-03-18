@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import cv2, pafy
+from pytube import YouTube
 import re
 
 def extract_video_id(youtube_link):
@@ -12,6 +13,7 @@ def extract_video_id(youtube_link):
 
 def video_load_from_url(url) :
     url = extract_video_id(url)
+
     video = pafy.new(url)
 
     best = video.getbest(preftype = 'mp4')
