@@ -22,6 +22,8 @@ parser.add_argument('--model', default="clip", choices=['clip', 'blip'],
                     type=str, help='clip or blip')
 parser.add_argument('--kfe', default=False, choices=[True, False],
                     type=bool, help='True or False')
+parser.add_argument('--download', default=True, choices=[True, False],
+                    type=bool, help='True of False')
 args = parser.parse_args()
 
 
@@ -30,7 +32,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # video load
 print('video load ... ')
-cap, url = video_load_from_url(args.url)
+cap, url = video_load_from_url(args.url, args.download)
 print('video load complete ')
 
 # KFD

@@ -7,7 +7,7 @@ import peakutils
 import matplotlib.pyplot as plt
 from PIL import Image
 from tqdm import tqdm
-from scenedetect import detect, ContentDetector
+# from scenedetect import detect, ContentDetector
 
 
 def scale(img, xScale, yScale):
@@ -93,6 +93,6 @@ def key_frame_detection(cap, kfe=False, Thres=0.3, plotMetrics=False, verbose=Fa
 
 # main method 2 - SCD
 
-def scene_change_detector(video_path):
-    scene_list = detect(video_path, ContentDetector())
-    return scene_list
+# def scene_change_detector(video_path):
+#     scene_list = detect(video_path, ContentDetector())
+#     return scene_list

@@ -11,13 +11,19 @@ def extract_video_id(youtube_link):
 
     return youtube_link
 
-def video_load_from_url(url) :
-    url = extract_video_id(url)
+def video_load_from_url(url, download = False) :
+    
+    if download == True :
+        streams = YouTube(url).streams.filter(adaptive=True, subtype="mp4", resolution="360p", only_video=True)
+        streams[0].download(filename="video.mp4")
+        url = extract_video_id(url)
+        cap = cv2.VideoCapture('./video.mp4')
 
-    video = pafy.new(url)
 
-    best = video.getbest(preftype = 'mp4')
-
-    cap = cv2.VideoCapture(best.url)
+    elif download == False :
+        url = extract_video_id(url)
+        video = pafy.new(url)
+        best = video.getbest(preftype = 'mp4')
+        cap = cv2.VideoCapture(best.url)
     
     return cap, url

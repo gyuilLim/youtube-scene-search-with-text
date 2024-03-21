@@ -37,8 +37,9 @@ CLI requires 4 aurguments.
 
 * youtube video(str) : video that you want to find sepecific scenes.
 * text(str) : text that you want to search with in youtube video.
-* model(str) : CLIP or BLIP
+* model(str) : CLIP or BLIP.
 * kfe(bool) : kfe means 'key frame extraction'. you can choose whether to use it or not.
+* download(bool) : whether to download youtube video.
 
 So, you can install CLI like :
 
@@ -47,7 +48,8 @@ $ python text_search_main.py \
 --url 'https://youtu.be/wbM4HS1sbXM?si=g8A58del3e_5Ljpo' \
 --text "a baby with her mother" \
 --model "clip" \
---kfe False
+--kfe False \
+--download True
 ```
 
 Return value is the youtube link where the scene is played.
