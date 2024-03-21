@@ -45,8 +45,8 @@ So, you can install CLI like :
 
 ```bash
 $ python text_search_main.py \
---url 'https://youtu.be/wbM4HS1sbXM?si=g8A58del3e_5Ljpo' \
---text "a baby with her mother" \
+--url 'https://www.youtube.com/watch?v=82C19hXaloc' \
+--text "A man standing while holding a book" \
 --model "clip" \
 --kfe False \
 --download True
@@ -59,9 +59,9 @@ https://youtu.be/wbM4HS1sbXM?t=1
 ```
 ## Result
 
-![image](https://github.com/gyuilLim/youtube_scene_search/assets/50009192/b58ffbee-d5d8-495a-a003-8784a76978b3)
+![image](https://github.com/gyuilLim/youtube_scene_text_search/assets/50009192/c040b52d-4c5a-4684-98d6-6e646c91a76a)
 
-Scene that is mached with input text **"a baby with her mother"**
+Scene that is mached with input text **"A man standing while holding a book"**
 
 
 ## Recommended specifications
