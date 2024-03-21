@@ -33,7 +33,7 @@ conda install --file requirements.txt
 
 I give you CLI for making it easy to execute.
 
-CLI requires 4 aurguments.
+CLI requires 5 aurguments.
 
 * youtube video(str) : video that you want to find sepecific scenes.
 * text(str) : text that you want to search with in youtube video.
