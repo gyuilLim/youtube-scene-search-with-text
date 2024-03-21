@@ -41,7 +41,7 @@ CLI requires 5 aurguments.
 * kfe(bool) : kfe means 'key frame extraction'. you can choose whether to use it or not.
 * download(bool) : whether to download youtube video.
 
-So, you can install CLI like :
+So, you can install as CLI like this :
 
 ```bash
 $ python text_search_main.py \
@@ -55,7 +55,7 @@ $ python text_search_main.py \
 Return value is the youtube link where the scene is played.
 
 ```bash
-https://youtu.be/wbM4HS1sbXM?t=1
+https://www.youtube.com/watch?v=82C19hXaloc&t=4
 ```
 ## Result
 

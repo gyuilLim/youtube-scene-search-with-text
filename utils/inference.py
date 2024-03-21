@@ -1,6 +1,6 @@
 import clip
 from tqdm import tqdm
-from text_search.textSimilarity import text_similarity
+from utils.textSimilarity import text_similarity
 
 def inference(model_name, text, model, dataloader, device) :
     if model_name == "clip" :

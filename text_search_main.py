@@ -1,8 +1,8 @@
-from text_search.videoLoad import video_load_from_url
-from text_search.frameMethod import key_frame_detection
-from text_search.dataset import custom_dataset
-from text_search.model import load_model
-from text_search.inference import inference
+from utils.videoLoad import video_load_from_url
+from utils.frameMethod import key_frame_detection
+from utils.dataset import custom_dataset
+from utils.model import load_model
+from utils.inference import inference
 
 from torch.utils.data import DataLoader
 from tqdm import tqdm
