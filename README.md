@@ -4,7 +4,7 @@
 
 This repository was created to find scenes auotomatically that you want in youtube video.
 
-I provied automation tool to find specific scene with your text.
+I provide automation tool to find specific scene with your text.
 
 ## Environment(conda)
 
