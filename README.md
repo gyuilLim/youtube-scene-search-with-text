@@ -61,7 +61,7 @@ https://www.youtube.com/watch?v=82C19hXaloc&t=4
 
 ![image](https://github.com/gyuilLim/youtube_scene_text_search/assets/50009192/c040b52d-4c5a-4684-98d6-6e646c91a76a)
 
-Scene that is mached with input text **"A man standing while holding a book"**
+Scene that is matched with input text **"A man standing while holding a book"**
 
 
 ## Recommended specifications
