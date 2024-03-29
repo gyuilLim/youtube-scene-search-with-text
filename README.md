@@ -2,17 +2,17 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gyuilLim/youtube_scene_search/blob/main/text_search_main.ipynb)
 
-This repository was created to find scenes auotomatically that you want in youtube video.
+This repository was created to find scenes that you waant auotomatically in youtube video.
 
-I provide automation tool to find specific scene with your text.
+I provide automation tool to find specific scenes with your text.
 
 ## Environment(conda)
 
-Various deep learning models are used in this tool.
+Deep learning models are used in this tool.
 
  Models : [CLIP](https://github.com/openai/CLIP), [BLIP-2](https://github.com/salesforce/LAVIS/tree/main/projects/blip2)
 
- So I recommend you to install the following command, for setting an environment.
+ So I recommend you to install the following command, for setting an environment.(Also You can run in Colab)
 
 
 ## Usage
